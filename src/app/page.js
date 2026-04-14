@@ -1,17 +1,32 @@
-import Navbar from "@/components/ui/Navbar";
-import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Projects from "@/components/sections/Projects";
-import Research from "@/components/sections/Research";
-import Education from "@/components/sections/Education";
-import Achievements from "@/components/sections/Achievements";
-import Contact from "@/components/sections/Contact";
-import Footer from "@/components/ui/Footer";
+// src/app/page.js
+// Server component by default — imports client components where needed
 
-export default function Page() {
+import Navigation          from '../components/Navigation';
+import Hero                from '../components/Hero';
+import About               from '../components/About';
+import Projects            from '../components/Projects';
+import Research            from '../components/Research';
+import Education           from '../components/Education';
+import { Achievements, Contact, Footer } from '../components/Achievements';
+import CustomCursor        from '../components/CustomCursor';
+import ScrollReveal        from '../components/ScrollReveal';
+
+export default function Home() {
   return (
     <>
-      <Navbar />
+      {/* Aurora background blobs */}
+      <div className="aurora">
+        <div className="aurora-blob" />
+        <div className="aurora-blob" />
+        <div className="aurora-blob" />
+      </div>
+
+      {/* Client-side interactive layers */}
+      <CustomCursor />
+      <ScrollReveal />
+
+      {/* Page sections */}
+      <Navigation />
       <Hero />
       <About />
       <Projects />
