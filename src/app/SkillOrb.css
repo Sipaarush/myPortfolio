@@ -1,0 +1,22 @@
+.orbit {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border: 1px solid var(--violet);
+  padding: 10px;
+}
+
+.orb {
+  position: absolute;
+  font-size: 10px;
+  background: var(--surface);
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+}

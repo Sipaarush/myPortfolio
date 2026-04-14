@@ -1,0 +1,75 @@
+/* ROOT THEME (copied + cleaned from your HTML) */
+:root {
+  --bg:#05060f;
+  --bg2:#080a18;
+  --surface:#0e1029;
+  --border:#1e2247;
+
+  --violet:#7c6af7;
+  --violet3:#a99dff;
+  --cyan:#22d4fd;
+
+  --text:#e8eaf8;
+  --text2:#8b92c4;
+
+  --mono:'JetBrains Mono', monospace;
+  --sans:'Outfit', sans-serif;
+}
+
+/* RESET */
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* GRID BACKGROUND */
+.grid-bg {
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size:50px 50px;
+  opacity:.2;
+}
+
+/* SECTION BASE */
+.section {
+  padding: 7rem 4rem;
+  position: relative;
+}
+
+/* HEADINGS */
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.section-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text2);
+  letter-spacing: .2em;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
